@@ -97,7 +97,6 @@ exports.update = (req, res) => {
 
 // Delete a book in the database
 exports.delete = (req, res) => {
-    //console.log(req.params);
     Book.findByIdAndRemove(req.params.id)
     .then(book => {
         if(!book) {
